@@ -9,6 +9,8 @@ import App from "./App";
 import { restoreCSRF, fetch } from "./store/csrf";
 import configureStore from "./store";
 
+import * as sessionActions from "./store/session";
+
 const store = configureStore();
 
 // if (process.env.NODE_ENV !== "production") {
@@ -19,6 +21,8 @@ if (process.env.NODE_ENV !== "production") {
 
     window.csrfFetch = fetch;
     window.store = store;
+    window.sessionActions = sessionActions;
+    console.log(sessionActions);
 }
 
 function Root() {
