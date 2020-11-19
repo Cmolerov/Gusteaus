@@ -373,6 +373,7 @@ as `window.csrfFetch`.
 ```js
 // frontend/src/index.js
 // ... other imports
+
 import { restoreCSRF, fetch } from './store/csrf';
 
 // ... const store = configureStore();
