@@ -5,7 +5,7 @@ import { Redirect } from "react-router-dom";
 
 
 //style
-import "./LoginForm.css";
+
 
 function LoginFormPage() {
     const dispatch = useDispatch();
