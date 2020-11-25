@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import * as sessionActions from "../../store/session";
+import * as sessionActions from "../../../store/session";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
-import { fetch } from "../../store/csrf";
+import { fetch } from "../../../store/csrf";
 
 //style
 import "./DineIn.css";
 
-export default function RestaurantSearch() {
+export default function RestaurantDineInSearch() {
     const [loading, setLoading] = useState(false);
     const [restaurants, setRestaurants] = useState(null);
     useEffect(() => {

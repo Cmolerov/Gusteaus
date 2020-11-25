@@ -1,0 +1,27 @@
+.dineIn_contianer {
+    display: flex;
+    flex-direction: row;
+}
+
+.dineIn_container-card {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+}
+
+.restaurant_container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+        rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.restaurant_img {
+    height: 80px;
+    width: 120px;
+}
+
+label{
+    margin: 2px;
+}

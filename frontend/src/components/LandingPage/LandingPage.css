@@ -8,3 +8,9 @@
     background-repeat: no-repeat;
 }
 
+.form-dinein {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-direction: row;
+}
