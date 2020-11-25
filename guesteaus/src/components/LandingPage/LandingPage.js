@@ -13,8 +13,6 @@ export default function LandingPage() {
             <div className="top_section-container">
                 <div></div>
             </div>
-            <div></div>
-            <div></div>
         </div>
     );
 }
