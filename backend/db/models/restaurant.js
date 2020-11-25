@@ -15,23 +15,23 @@ module.exports = (sequelize, DataTypes) => {
         {
             name: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: DataTypes.STRING,
             },
             location: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: DataTypes.STRING,
             },
             cuisine: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: DataTypes.STRING,
             },
             takeOut: {
                 allowNull: false,
-                type: Sequelize.BOOLEAN,
+                type: DataTypes.BOOLEAN,
             },
             restaurantImage: {
                 allowNull: false,
-                type: Sequelize.STRING,
+                type: DataTypes.STRING,
             },
         },
         {
