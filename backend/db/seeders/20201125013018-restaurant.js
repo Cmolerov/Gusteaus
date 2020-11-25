@@ -10,7 +10,7 @@ module.exports = {
                     location: "Bikini Bottom",
                     cuisine: "Burgers",
                     takeOut: "true",
-                    restaurantImage: "/backend/public/imgs/chumbucket.jpeg",
+                    restaurantImage: "/imgs/chumbucket.jpeg",
                     createdAt: new Date(),
                     updatedAt: new Date(),
                 },
@@ -19,7 +19,7 @@ module.exports = {
                     location: "Bikini Bottom",
                     cuisine: "Burgers",
                     takeOut: "false",
-                    restaurantImage: "/backend/public/imgs/krustykrab.jpeg",
+                    restaurantImage: "/imgs/krustykrab.jpeg",
                     createdAt: new Date(),
                     updatedAt: new Date(),
                 },
@@ -28,7 +28,7 @@ module.exports = {
                     location: "Colorado Springs",
                     cuisine: "Asian fuision",
                     takeOut: "true",
-                    restaurantImage: "/backend/public/imgs/citywok.jpeg",
+                    restaurantImage: "/imgs/citywok.jpeg",
                     createdAt: new Date(),
                     updatedAt: new Date(),
                 },
@@ -37,7 +37,7 @@ module.exports = {
                     location: "Quahog",
                     cuisine: "Burgers",
                     takeOut: "false",
-                    restaurantImage: "/backend/public/imgs/chumbucket.jpeg",
+                    restaurantImage: "/imgs/chumbucket.jpeg",
                     createdAt: new Date(),
                     updatedAt: new Date(),
                 },
@@ -53,6 +53,6 @@ module.exports = {
          * Example:
          * await queryInterface.bulkDelete('People', null, {});
          */
-        return queryInterface.bulkDelete("Resturants", null, {});
+        return queryInterface.bulkDelete("Restaurants", null, {});
     },
 };
