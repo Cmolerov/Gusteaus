@@ -36,7 +36,7 @@ export default function LandingPage() {
         fetchRestaurants();
     }, []);
     return (
-        <div>
+        <div className="main_container">
             {/* <div className="top_section-container"></div> */}
             <div className="form-dinein">
                 <RestaurantDineIn />

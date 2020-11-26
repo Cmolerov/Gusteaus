@@ -1,3 +1,7 @@
+.main_container{
+    display: flex;
+}
+
 .top_section-container {
     background-image: url("../images/tableBackground.svg");
     height: 60vh;
@@ -10,7 +14,5 @@
 
 .form-dinein {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-direction: row;
+    align-content: flex-end;
 }

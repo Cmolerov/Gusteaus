@@ -4,9 +4,10 @@
 }
 
 .dineIn_container-card {
+    width: 1000px;
     display: flex;
     flex-direction: row;
-    align-content: flex-end;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .restaurant_container {
@@ -22,6 +23,6 @@
     width: 120px;
 }
 
-label{
+label {
     margin: 2px;
 }
