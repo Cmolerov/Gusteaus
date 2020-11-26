@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { fetch } from "../../store/csrf";
 import RestaurantDineIn from "./RestaurantsDisplay/DineIn";
+import DateReservation from "../DateReservation/DateReservation"
 
 //style
 import "./LandingPage.css";
@@ -39,7 +40,8 @@ export default function LandingPage() {
         <div className="main_container">
             {/* <div className="top_section-container"></div> */}
             <div className="form-dinein">
-                <RestaurantDineIn />
+                {/* <RestaurantDineIn /> */}
+                <DateReservation/>
             </div>
         </div>
     );
