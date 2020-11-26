@@ -8,7 +8,9 @@ const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
 const yyyy = today.getFullYear();
 const currentDate = mm + "-" + dd + "-" + yyyy;
 
-export default function DateReservation() {
+export default function DateReservation(props) {
+    console.log(props);
+    // const { handleSubmit } = props;
     const [partySize, setPartySize] = useState(2);
     const [date, setDate] = useState(currentDate);
 
@@ -19,11 +21,15 @@ export default function DateReservation() {
     const handleDateChange = (e) => {
         setDate(e.target.value);
     };
-    
-    const handleSubmit = () => {
+
+    // searching for available reservations
+    //     'GET /api/resaurants'
+    // make a reservation for a restaurant
+    //     'POST /api/reservations'
+
+    const handleFetch = () => {
         const reservationInfo = { partySize, date };
-        // fetch()
-        console.log(reservationInfo);
+        // handleSubmit(reservationInfo);
     };
 
     return (
@@ -45,7 +51,7 @@ export default function DateReservation() {
                 min={currentDate}
                 max="2021-11-27"
             />
-            <button onClick={handleSubmit}>Submit</button>
+            <button onClick={handleFetch}>Submit</button>
         </div>
     ); // yyyy -mm-dd
 }
