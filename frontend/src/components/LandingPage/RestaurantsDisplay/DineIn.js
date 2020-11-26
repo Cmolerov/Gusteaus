@@ -49,7 +49,7 @@ export default function RestaurantDineInSearch() {
                                 src={
                                     window.location.origin +
                                     restaurant.restaurantImage
-                                }
+                                } alt=""
                             />
                             <label>{restaurant.name}</label>
                             <label>{restaurant.location}</label>

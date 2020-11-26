@@ -4,15 +4,18 @@
 
 .top_section-container {
     background-image: url("../images/tableBackground.svg");
-    height: 60vh;
+    height: 40vh;
     width: 100vw;
     position: absolute;
-    z-index: -1;
+    /* z-index: -1; */
     object-fit: cover;
     background-repeat: no-repeat;
 }
 
 .form-dinein {
     display: flex;
-    align-content: flex-end;
+    
 }
+
+.reservation_bar{}
+

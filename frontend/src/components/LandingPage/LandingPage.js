@@ -38,10 +38,12 @@ export default function LandingPage() {
     }, []);
     return (
         <div className="main_container">
-            {/* <div className="top_section-container"></div> */}
+            <div className="top_section-container">
+                <DateReservation className="reservation_bar" />
+            </div>
             <div className="form-dinein">
                 {/* <RestaurantDineIn /> */}
-                <DateReservation/>
+                {/* <DateReservation/> */}
             </div>
         </div>
     );

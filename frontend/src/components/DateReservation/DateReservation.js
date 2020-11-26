@@ -2,6 +2,9 @@ import { set } from "js-cookie";
 import React, { useState } from "react";
 import { fetch } from "../../store/csrf";
 
+//style
+import "./DateReservation.css"
+
 const today = new Date();
 const dd = String(today.getDate()).padStart(2, "0");
 const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
@@ -27,24 +30,31 @@ export default function DateReservation() {
     };
 
     return (
-        <div>
+        <div className="reservation_info">
             <label>date reservation</label>
-            <select value={partySize} onChange={handlePartySizeChange}>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
-                <option value={4}>4</option>
-                <option value={5}>5</option>
-                <option value={6}>6</option>
-                <option value={7}>7</option>
-                <option value={8}>8</option>
-            </select>
             <input
+                className="date_bar"
                 onChange={handleDateChange}
                 value={date}
                 type="date"
                 min={currentDate}
                 max="2021-11-27"
             />
+            <label className="partySize_container"> Party Size
+                <select
+                    className="partySize"
+                    value={partySize}
+                    onChange={handlePartySizeChange}
+                >
+                    <option value={2}>2</option>
+                    <option value={3}>3</option>
+                    <option value={4}>4</option>
+                    <option value={5}>5</option>
+                    <option value={6}>6</option>
+                    <option value={7}>7</option>
+                    <option value={8}>8</option>
+                </select>
+            </label>
             <button onClick={handleSubmit}>Submit</button>
         </div>
     ); // yyyy -mm-dd
