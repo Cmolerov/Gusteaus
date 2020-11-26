@@ -17,16 +17,7 @@ export default function RestaurantDineInSearch() {
                 const res = await fetch("/api/restaurants");
                 const fetchedRestaurants = res.data;
 
-                if (fetchedRestaurants) {
-                    const takeOut = fetchedRestaurants.filter((restaurant) => {
-                        return restaurant.takeOut === true;
-                    });
-                    const dineIn = fetchedRestaurants.filter((restaurant) => {
-                        return restaurant.takeOut === false;
-                    });
-
-                    setRestaurants({ takeOut, dineIn });
-                }
+                if (fetchedRestaurants) setRestaurants(fetchedRestaurants);
                 setLoading(false);
             } catch (err) {
                 console.error(err);
@@ -38,8 +29,8 @@ export default function RestaurantDineInSearch() {
         <div>
             {/* <div className="top_section-container"></div> */}
             <div className="dineIn_container-card">
-                {restaurants && restaurants.dineIn ? (
-                    restaurants.dineIn.map((restaurant) => (
+                {restaurants ? (
+                    restaurants.map((restaurant) => (
                         <div
                             className="restaurant_container"
                             key={restaurant.id}
@@ -49,11 +40,14 @@ export default function RestaurantDineInSearch() {
                                 src={
                                     window.location.origin +
                                     restaurant.restaurantImage
-                                } alt=""
+                                }
+                                alt=""
                             />
                             <label>{restaurant.name}</label>
-                            <label>{restaurant.location}</label>
-                            <label>{restaurant.cuisine}</label>
+                            <label>
+                                Location:  {restaurant.location}
+                            </label>
+                            <label>Cuisine:  { restaurant.cuisine }</label>
                             <label></label>
                             <br />
                         </div>

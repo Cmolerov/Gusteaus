@@ -42,8 +42,8 @@ export default function LandingPage() {
                 <DateReservation className="reservation_bar" />
             </div>
             <div className="form-dinein">
-                {/* <RestaurantDineIn /> */}
-                {/* <DateReservation/> */}
+                <RestaurantDineIn />
+               
             </div>
         </div>
     );
