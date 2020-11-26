@@ -9,8 +9,7 @@ const yyyy = today.getFullYear();
 const currentDate = mm + "-" + dd + "-" + yyyy;
 
 export default function DateReservation(props) {
-    console.log(props);
-    // const { handleSubmit } = props;
+    const { handleSubmit } = props;
     const [partySize, setPartySize] = useState(2);
     const [date, setDate] = useState(currentDate);
 
@@ -29,7 +28,7 @@ export default function DateReservation(props) {
 
     const handleFetch = () => {
         const reservationInfo = { partySize, date };
-        // handleSubmit(reservationInfo);
+        handleSubmit(reservationInfo);
     };
 
     return (

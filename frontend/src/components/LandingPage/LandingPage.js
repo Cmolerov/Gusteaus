@@ -12,6 +12,10 @@ import "./LandingPage.css";
 export default function LandingPage() {
     const [loading, setLoading] = useState(false);
     const [restaurants, setRestaurants] = useState(null);
+    const searchRestaurants = (reservationInfo) => {
+        console.log(reservationInfo);
+        // fetch('/api/resaurants')
+    };
     useEffect(() => {
         const fetchRestaurants = async () => {
             try {
@@ -44,7 +48,7 @@ export default function LandingPage() {
             {/* <div className="top_section-container"></div> */}
             <div className="form-dinein">
                 {/* <RestaurantDineIn /> */}
-                <DateReservation potato="42" />
+                <DateReservation handleSubmit={searchRestaurants} />
             </div>
         </div>
     );
