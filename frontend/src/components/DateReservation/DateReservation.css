@@ -1,0 +1,26 @@
+.reservation_info {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top: 8%;
+    margin-left: 10%;
+    /* background-color: aliceblue; */
+}
+.partySize_container {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: aliceblue;
+    height: 30px;
+}
+.partySize {
+    height: 30px;
+    margin: 0px 5px 0px;
+}
+
+.date_bar {
+    height: 30px;
+    width: 200px;
+    align-items: center;
+}
+label {
+    background-color: aliceblue;
+}

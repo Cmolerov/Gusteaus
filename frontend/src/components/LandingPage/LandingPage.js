@@ -3,41 +3,49 @@ import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { fetch } from "../../store/csrf";
+import RestaurantDineIn from "./RestaurantsDisplay/DineIn";
+import DateReservation from "../DateReservation/DateReservation";
 
 //style
 import "./LandingPage.css";
 
 export default function LandingPage() {
-    const [loading, setLoading] = useState(false);
-    const [restaurants, setRestaurants] = useState(null);
-    useEffect(() => {
-        const fetchRestaurants = async () => {
-            try {
-                setLoading(true);
-                const res = await fetch("/api/restaurants");
-                const fetchedRestaurants = res.data;
+    // const [loading, setLoading] = useState(false);
+    // const [restaurants, setRestaurants] = useState(null);
+    // useEffect(() => {
+    //     const fetchRestaurants = async () => {
+    //         try {
+    //             setLoading(true);
+    //             const res = await fetch("/api/restaurants");
+    //             const fetchedRestaurants = res.data;
 
-                if (fetchedRestaurants) {
-                    const takeOut = fetchedRestaurants.filter((restaurant) => {
-                        return restaurant.takeOut === true;
-                    });
-                    const dineIn = fetchedRestaurants.filter((restaurant) => {
-                        return restaurant.takeOut === false;
-                    });
+    //             if (fetchedRestaurants) {
+    //                 const takeOut = fetchedRestaurants.filter((restaurant) => {
+    //                     return restaurant.takeOut === true;
+    //                 });
+    //                 const dineIn = fetchedRestaurants.filter((restaurant) => {
+    //                     return restaurant.takeOut === false;
+    //                 });
 
-                    setRestaurants({ takeOut, dineIn });
-                }
-                setLoading(false);
-            } catch (err) {
-                console.error(err);
-            }
-        };
-        fetchRestaurants();
-    }, []);
+    //                 setRestaurants({ takeOut, dineIn });
+    //             }
+    //             setLoading(false);
+    //         } catch (err) {`
+    //             console.error(err);
+    //         }
+    //     };
+    //     fetchRestaurants();
+    // }, []);
     return (
-        <div>
+        <div className="main_container">
             <div className="top_section-container">
+                <DateReservation className="reservation_bar" />
             </div>
+            <label className="restaruant_container-name">Available Now </label>
+            <div className="form-dinein">
+                <RestaurantDineIn />
+            </div>
+            <text></text>
         </div>
     );
 }
