@@ -23,6 +23,7 @@ export default function DateReservation() {
         setDate(e.target.value);
     };
     
+    
     const handleSubmit = () => {
         const reservationInfo = { partySize, date };
         // fetch()

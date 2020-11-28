@@ -1,5 +1,7 @@
 .main_container {
     display: flex;
+    height: 100%;
+    width: 100%;
 }
 
 .top_section-container {
@@ -11,7 +13,11 @@
     object-fit: cover;
     background-repeat: no-repeat;
 }
-
+.reservation_container-name {
+    display: flex;
+    justify-content: flex-start;
+    width: 200px;
+}
 .form-dinein {
     display: flex;
     margin-top: 500px;

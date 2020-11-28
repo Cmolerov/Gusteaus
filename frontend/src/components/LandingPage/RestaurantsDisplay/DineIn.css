@@ -22,11 +22,11 @@
 .restaurant_img {
     margin-left: 20px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     height: 80px;
     width: 120px;
 }
 
-label {
+/* label {
     margin: 2px;
-}
+} */
