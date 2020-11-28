@@ -43,7 +43,8 @@ export default function LandingPage() {
             </div>
             <label className="restaruant_container-name">Available Now </label>
             <div className="form-dinein">
-                <RestaurantDineIn />
+                {/* <RestaurantDineIn /> */}
+                <DateReservation handleSubmit={searchRestaurants} />
             </div>
             <text></text>
         </div>
