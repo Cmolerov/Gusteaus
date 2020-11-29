@@ -47,22 +47,13 @@ function SignupFormPage() {
                         <button className="form_container-demo">
                             Login as Gusteau
                         </button>
-                        <br/>
+                        <br />
                         <label>
-                         First Name
+                            Username
                             <input
                                 type="text"
-                                value=""
-                                onChange={(e) => setEmail(e.target.value)}
-                                required
-                            />
-                        </label>
-                        <label>
-                            Last Name
-                            <input
-                                type="text"
-                                value=""
-                                onChange={(e) => setEmail(e.target.value)}
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
                                 required
                             />
                         </label>

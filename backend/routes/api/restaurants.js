@@ -9,6 +9,13 @@ const { db } = require("../../config");
 
 const router = express.Router();
 
+const RestaurantNotFoundError = (id) => {
+    const err = Error(`Restaurant with id of ${id} could not be found`);
+    err.title = "Song Not Found";
+    err.status = 404;
+    return err;
+};
+
 router.get(
     "/",
     asyncHandler(async (req, res) => {
@@ -21,9 +28,11 @@ router.get(
 
 router.get(
     "/:id",
-    asyncHandler(async (req, res) => {
+    asyncHandler(async (req, res, next) => {
         const id = parseInt(req.params.id, 10);
         const restaurant = await Restaurant.findByPk(id);
+
+        if (!restaurant) next(RestaurantNotFoundError);
         res.json(restaurant);
     })
 );
