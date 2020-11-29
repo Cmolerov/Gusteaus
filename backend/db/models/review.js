@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Review.belongsTo(models.User, { foreignKey: "userId" });
-      Review.belongsTo(models.Restaurants, { foreignKey: "restaurantId" });
+      Review.belongsTo(models.Restaurant, { foreignKey: "restaurantId" });
     }
   };
   Review.init({
@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 type: DataTypes.STRING,
             },
-        },, {
+        }, {
     sequelize,
     modelName: 'Review',
   });
