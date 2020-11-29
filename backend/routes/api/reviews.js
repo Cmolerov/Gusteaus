@@ -25,6 +25,7 @@ router.post(
     "/",
     requireAuth,
     asyncHandler(async (req, res) => {
+        const data = req.body
         const review = new Review(data);
         await review.save();
         res.json(review);
@@ -64,3 +65,5 @@ router.delete(
         res.json(review);
     })
 );
+
+module.exports = router

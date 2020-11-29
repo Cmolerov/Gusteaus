@@ -3,6 +3,8 @@ import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect, useParams } from "react-router-dom";
 import { fetch } from "../../store/csrf";
+import ReviewForm from "../ReviewForm/ReviewForm";
+import Reviews from "../Reviews/Reviews";
 
 export default function DisplayRestaurant() {
     const [loading, setLoading] = useState(false);
@@ -30,6 +32,8 @@ export default function DisplayRestaurant() {
                     <p>{restaurant.name}</p>
                     <p>TakeOut : {restaurant.takeOut}</p>
                     <p>{restaurant.cuisine}</p>
+                    <ReviewForm></ReviewForm>
+                    <Reviews></Reviews>
                 </div>
             ) : (
                 <p>Loading..</p>
