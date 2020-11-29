@@ -11,6 +11,10 @@ export default function RestaurantDineInSearch() {
     const history = useHistory();
     const [loading, setLoading] = useState(false);
     const [restaurants, setRestaurants] = useState(null);
+
+    const user = useSelector((state) => {
+        return state.session.user
+    })
     useEffect(() => {
         const fetchRestaurants = async () => {
             try {
@@ -38,7 +42,11 @@ export default function RestaurantDineInSearch() {
 
     const handleRestaurantClick = (e, restaurantId) => {
         e.preventDefault();
-        history.push(`/restaurants/${restaurantId}`);
+        if (!user) {
+            history.push('/login')
+        } else {
+            history.push(`/restaurants/${restaurantId}`)
+        }
         console.log(restaurantId);
     };
     return (
