@@ -17,7 +17,61 @@
         rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
 
-.res-img{
+.container-parent {
+    display: flex;
+    width: 100%;
+}
+.container-1 {
+    flex: 0 1 50%;
+    display: flex;
+    height: 100%;
+    max-width: 70%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* border: 1px solid red;
+    background: #0bda51; */
+    margin-left: 2%;
+    overflow-wrap: break-word;
+}
+.container-2 {
+    flex: 0 1 50%;
+    display: flex;
+    height: 100%;
+    max-width: 50%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* border: 1px solid red;
+    background: #0bda51; */
+}
+.res_title {
+    max-width: 90%;
+}
+.res_img {
     height: 200px;
     width: 200px;
+    border-radius: 100px;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.info-res {
+    margin-left: 5%;
+    max-width: 80%;
+}
+/* .description-res {
+    word-wrap: break-word;
+} */
+
+.restaurant_container-info {
+    height: 90%;
+    width: 75%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: white;
+    margin-top: 5%;
+    padding-left: 20%;
+}
+
+.review-container {
+    max-height: 35%;
+    overflow-y: scroll;
 }
