@@ -44,6 +44,7 @@ export default function RestaurantDineInSearch() {
     return (
         <>
             <div>
+                <h2 className="container-title">Available Now</h2>
                 <div className="dineIn_container-card">
                     {restaurants && restaurants.dineIn ? (
                         restaurants.dineIn.map((restaurant) => (
@@ -81,6 +82,7 @@ export default function RestaurantDineInSearch() {
             <br />
             <div>
                 {/* <div className="top_section-container"></div> */}
+                <h2 className="container-title"> For Takeout</h2>
                 <div className="takeOut_container-card">
                     {restaurants && restaurants.takeOut ? (
                         restaurants.takeOut.map((restaurant) => (
