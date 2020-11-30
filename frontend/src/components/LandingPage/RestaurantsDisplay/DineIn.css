@@ -9,6 +9,7 @@
 }
 
 .dineIn_container-card {
+    margin-top: 0px;
     padding: 20px;
     width: 75%;
     display: flex;

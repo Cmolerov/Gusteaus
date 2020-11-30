@@ -16,7 +16,7 @@ export default function ReviewForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log("hello")
+        // console.log("hello")
         setErrors([])
         try {
 
@@ -34,14 +34,13 @@ export default function ReviewForm() {
             })
 
             
-            const review = res.data
-            console.log(review)
+            // const review = res.data
+            // console.log(review)
 
         } catch(err) {
             setErrors([err])
         }
     }
-
     const updateContent = (e) => {
         e.preventDefault();
         setContent(e.target.value);
