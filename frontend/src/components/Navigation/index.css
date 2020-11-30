@@ -1,0 +1,21 @@
+.nav_bar {
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+.nav_bar-link-home {
+    text-decoration: none;
+    margin: 2%;
+}
+.nav_bar-link-login {
+    text-decoration: none;
+    margin: 2%;
+}
+.nav_bar-link-signup {
+    text-decoration: none;
+    margin: 2%;
+}
+.nav_bar-logo {
+    background-image: url("../images/gusteausLogo.svg");
+    height: 10px;
+    width: 20px;
+}
