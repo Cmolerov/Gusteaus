@@ -8,6 +8,7 @@
 To signIn or signUp Gusteau's uses jsonwebtoken and for password hashing it uses bcrypt. 
 
 ## Backend
+Database
 ![schema](https://user-images.githubusercontent.com/68914791/100596661-6ab59600-32ca-11eb-872e-8542b6fb53d9.png)
 
 ## Pages
@@ -24,6 +25,7 @@ To signIn or signUp Gusteau's uses jsonwebtoken and for password hashing it uses
 ![login](https://user-images.githubusercontent.com/68914791/100596902-b7996c80-32ca-11eb-82a4-38f686a2ad2d.png)
 
 ## Search
+- The search uses a suggested search and as you type in letters it updates the results
 ![search](https://user-images.githubusercontent.com/68914791/100596665-6b4e2c80-32ca-11eb-98d3-58b801ee3b5e.png)
 
 ## Restaurant Display
@@ -46,9 +48,7 @@ Want to help me in my Adventure ?
 
 - Fork the repository
 - Create a new branch with git checkout -b feature-branch-name
-- Make appropriate changes to the files and push back to github
-- Create a Pull Request
-- Use a clear and descriptive title for the issue to identify the suggestion.
+- Create a Pull Request and Use a clear and descriptive title for the issue to identify the suggestion.
 - Include any relevant issue numbers in the PR body, not the title.
 - Provide a comprehensive description of all changes made.
 ## Setting Up and Starting a Local Server
