@@ -4,7 +4,7 @@ const asyncHandler = require("express-async-handler");
 
 const { handleValidationErrors } = require("../../utils/validation");
 const { setTokenCookie, restoreUser } = require("../../utils/auth");
-const { Restaurant } = require("../../db/models");
+const { Restaurant, Review, User } = require("../../db/models");
 const { db } = require("../../config");
 
 const router = express.Router();
@@ -34,6 +34,21 @@ router.get(
 
         if (!restaurant) next(RestaurantNotFoundError);
         res.json(restaurant);
+    })
+);
+
+router.get(
+    "/:id/reviews",
+    asyncHandler( async (req, res) => {
+        const id = parseInt(req.params.id, 10)
+        const reviews = await Review.findAll({
+            where: {
+                restaurantId: id
+            },
+            include: User,
+        })
+
+        res.json(reviews)
     })
 );
 
