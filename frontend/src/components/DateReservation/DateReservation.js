@@ -1,9 +1,10 @@
 import { set } from "js-cookie";
 import React, { useState } from "react";
 import { fetch } from "../../store/csrf";
+import RestaurantSearch from "../RestaurantSearch/RestaurantSearch";
 
 //style
-import "./DateReservation.css"
+import "./DateReservation.css";
 
 const today = new Date();
 const dd = String(today.getDate()).padStart(2, "0");
@@ -36,31 +37,36 @@ export default function DateReservation(props) {
 
     return (
         <div className="reservation_info">
-            <label>date reservation</label>
-            <input
-                className="date_bar"
-                onChange={handleDateChange}
-                value={date}
-                type="date"
-                min={currentDate}
-                max="2021-11-27"
-            />
-            <label className="partySize_container"> Party Size
-                <select
-                    className="partySize"
-                    value={partySize}
-                    onChange={handlePartySizeChange}
-                >
-                    <option value={2}>2</option>
-                    <option value={3}>3</option>
-                    <option value={4}>4</option>
-                    <option value={5}>5</option>
-                    <option value={6}>6</option>
-                    <option value={7}>7</option>
-                    <option value={8}>8</option>
-                </select>
-            </label>
-            <button onClick={handleSubmit}>Submit</button>
+            <div className="dateParty">
+                <input
+                    className="date_bar"
+                    onChange={handleDateChange}
+                    value={date}
+                    type="date"
+                    min={currentDate}
+                    max="2021-11-27"
+                />
+                <label className="partySize_container">
+                    Party Size
+                    <select
+                        className="partySize"
+                        value={partySize}
+                        onChange={handlePartySizeChange}
+                    >
+                        <option value={2}>2</option>
+                        <option value={3}>3</option>
+                        <option value={4}>4</option>
+                        <option value={5}>5</option>
+                        <option value={6}>6</option>
+                        <option value={7}>7</option>
+                        <option value={8}>8</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <RestaurantSearch className="search-container" />
+                
+            </div>
         </div>
     ); // yyyy -mm-dd
 }

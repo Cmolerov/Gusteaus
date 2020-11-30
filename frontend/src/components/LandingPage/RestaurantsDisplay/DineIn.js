@@ -44,30 +44,33 @@ export default function RestaurantDineInSearch() {
     return (
         <>
             <div>
-                {/* <div className="top_section-container"></div> */}
                 <div className="dineIn_container-card">
                     {restaurants && restaurants.dineIn ? (
                         restaurants.dineIn.map((restaurant) => (
-                            <div
-                                className="restaurant_container"
-                                key={restaurant.id}
-                                onClick={(e) =>
-                                    handleRestaurantClick(e, restaurant.id)
-                                }
-                            >
-                                <img
-                                    className="restaurant_img"
-                                    src={
-                                        window.location.origin +
-                                        restaurant.restaurantImage
+                            <div className="try">
+                                <div
+                                    className="restaurant_container"
+                                    key={restaurant.id}
+                                    onClick={(e) =>
+                                        handleRestaurantClick(e, restaurant.id)
                                     }
-                                    alt=""
-                                />
-                                <label>{restaurant.name}</label>
-                                <label>Location: {restaurant.location}</label>
-                                <label>Cuisine: {restaurant.cuisine}</label>
-                                <label></label>
-                                <br />
+                                >
+                                    {/* <div className="image-div"> */}
+                                    <img
+                                        className="restaurant_img"
+                                        src={
+                                            window.location.origin +
+                                            restaurant.restaurantImage
+                                        }
+                                        alt=""
+                                    />
+                                    {/* </div> */}
+                                    <label>{restaurant.name}</label>
+                                    <label>
+                                        Location: {restaurant.location}
+                                    </label>
+                                    <label>Cuisine: {restaurant.cuisine}</label>
+                                </div>
                             </div>
                         ))
                     ) : (
@@ -81,26 +84,30 @@ export default function RestaurantDineInSearch() {
                 <div className="takeOut_container-card">
                     {restaurants && restaurants.takeOut ? (
                         restaurants.takeOut.map((restaurant) => (
-                            <div
-                                className="restaurant_container"
-                                key={restaurant.id}
-                                onClick={(e) =>
-                                    handleRestaurantClick(e, restaurant.id)
-                                }
-                            >
-                                <img
-                                    className="restaurant_img"
-                                    src={
-                                        window.location.origin +
-                                        restaurant.restaurantImage
+                            <div className="try">
+                                <div
+                                    className="restaurant_container"
+                                    key={restaurant.id}
+                                    onClick={(e) =>
+                                        handleRestaurantClick(e, restaurant.id)
                                     }
-                                    alt=""
-                                />
-                                <label>{restaurant.name}</label>
-                                <label>Location: {restaurant.location}</label>
-                                <label>Cuisine: {restaurant.cuisine}</label>
-                                <label></label>
-                                <br />
+                                >
+                                    {/* <div className="image-div"> */}
+                                    <img
+                                        className="restaurant_img"
+                                        src={
+                                            window.location.origin +
+                                            restaurant.restaurantImage
+                                        }
+                                        alt=""
+                                    />
+                                    {/* </div> */}
+                                    <label>{restaurant.name}</label>
+                                    <label>
+                                        Location: {restaurant.location}
+                                    </label>
+                                    <label>Cuisine: {restaurant.cuisine}</label>
+                                </div>
                             </div>
                         ))
                     ) : (
