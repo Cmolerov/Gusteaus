@@ -1,0 +1,23 @@
+.display-background {
+    background-color: #273745;
+    background-image: url("../images/tableBackground.svg");
+    height: 250px;
+    width: 100%;
+    position: absolute;
+}
+
+.display-container {
+    background-color: white;
+    display: flex;
+    height: 550px;
+    width: 75%;
+    position: absolute;
+    margin: 10% 10% 10% 12%;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+        rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+
+.res-img{
+    height: 200px;
+    width: 200px;
+}
