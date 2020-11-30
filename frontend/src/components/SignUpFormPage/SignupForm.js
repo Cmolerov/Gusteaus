@@ -32,6 +32,18 @@ function SignupFormPage() {
             "Confirm Password field must be the same as the Password field",
         ]);
     };
+    const logInDemo = (e) => {
+        e.preventDefault();
+        setErrors([]);
+        return dispatch(
+            sessionActions.login({
+                credential: "demo@user.io",
+                password: "password",
+            })
+        ).catch((res) => {
+            if (res.data && res.data.errors) setErrors(res.data.errors);
+        });
+    };
 
     return (
         <div className="SignUp-background">
@@ -44,7 +56,10 @@ function SignupFormPage() {
                                 <li key={idx}>{error}</li>
                             ))}
                         </ul>
-                        <button className="form_container-demo">
+                        <button
+                            onClick={logInDemo}
+                            className="form_container-demo"
+                        >
                             Login as Gusteau
                         </button>
                         <br />
