@@ -25,37 +25,11 @@ export default function LandingPage() {
             setSearching(true);
         }
     }, [term]);
-    // const [loading, setLoading] = useState(false);
-    // const [restaurants, setRestaurants] = useState(null);
-    // useEffect(() => {
-    //     const fetchRestaurants = async () => {
-    //         try {
-    //             setLoading(true);
-    //             const res = await fetch("/api/restaurants");
-    //             const fetchedRestaurants = res.data;
 
-    //             if (fetchedRestaurants) {
-    //                 const takeOut = fetchedRestaurants.filter((restaurant) => {
-    //                     return restaurant.takeOut === true;
-    //                 });
-    //                 const dineIn = fetchedRestaurants.filter((restaurant) => {
-    //                     return restaurant.takeOut === false;
-    //                 });
-
-    //                 setRestaurants({ takeOut, dineIn });
-    //             }
-    //             setLoading(false);
-    //         } catch (err) {`
-    //             console.error(err);
-    //         }
-    //     };
-    //     fetchRestaurants();
-    // }, []);
     return (
         <div className="main_container">
             <div className="top_section-container">
                 <DateReservation className="reservation_bar" />
-                <RestaurantSearch />
             </div>
             <div>
                 <label className="restaruant_container-name">
@@ -63,7 +37,7 @@ export default function LandingPage() {
                 </label>
                 <div className="form-dinein">
                     {term && searching ? (
-                        <SearchResults></SearchResults>
+                        <SearchResults className="search_bar-container"></SearchResults>
                     ) : (
                         <RestaurantDineIn />
                     )}

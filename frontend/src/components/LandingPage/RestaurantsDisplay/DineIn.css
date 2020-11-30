@@ -9,37 +9,68 @@
 }
 
 .dineIn_container-card {
-    width: 100%;
+    padding: 20px;
+    width: 75%;
     display: flex;
     margin-left: 10%;
     flex-direction: row;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    overflow-x: scroll;
+    background-color: white;
+    border-radius: 5px;
 }
 
 .takeOut_container-card {
-    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    width: 75%;
     display: flex;
     margin-left: 10%;
     flex-direction: row;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    overflow-x: scroll;
 }
 
 .restaurant_container {
+    height: 150px;
+    width: 150px;
     display: flex;
     flex-direction: column;
     margin: 10px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
         rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 5px;
+}
+.restaurant_container:hover {
+    box-shadow: none;
 }
 
 .restaurant_img {
-    margin-left: 20px;
     display: flex;
     /* justify-content: center; */
-    height: 80px;
-    width: 120px;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 5px;
 }
-
+body {
+    background-color: white;
+}
 /* label {
     margin: 2px;
 } */
+.image-div {
+    height: 100%;
+    width: 100%;
+}
+.try {
+    border: 3px solid black;
+    height: 270px;
+    margin-right: 30px;
+    padding: 0px;
+}
+.try:hover {
+    border: 1px solid black;
+}
+.container-title {
+    margin-left: 170px;
+}

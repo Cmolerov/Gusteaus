@@ -1,6 +1,6 @@
 .reservation_info {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-content: center;
     margin-top: 8%;
     margin-left: 10%;
@@ -8,19 +8,51 @@
 }
 .partySize_container {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    background-color: aliceblue;
+    background-color:white;
     height: 30px;
+    border-radius: 5px;
 }
 .partySize {
-    height: 30px;
+    height: 100%;
     margin: 0px 5px 0px;
+    margin-left: 5px;
+    border: none;
 }
 
 .date_bar {
-    height: 30px;
+    height: 100%;
     width: 200px;
     align-items: center;
+    border-radius: 5px;
+    margin-right: 5px;
 }
-label {
+/* label {
     background-color: aliceblue;
+} */
+.search-container {
+    height: 100%;
+    width: 300px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.searchAndSubmit {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.dateParty {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+.submit-search {
+    border-radius: 0%;
+    background-color: #fe5200;
+    height: 100%;
+    width: 80px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 4px !important;
 }
